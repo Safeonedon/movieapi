@@ -32,11 +32,11 @@ php artisan migrate
 ```
 ## Instalation
 
-to get nmovies from api run
+to get movies from api run
 ``` bash
 php artisan fetch:cron
 ```
-for daily fetch you can use this command with a cron job commande 
+for daily fetch you can use this command with a cron job command
 
 ``` bash
 * * 1 * * sh  usr/bin/php  /routetoproject/artisan fetch:cron
