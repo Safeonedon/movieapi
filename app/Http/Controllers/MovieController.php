@@ -11,8 +11,8 @@ use Ixudra\Curl\Facades\Curl;
 class MovieController extends Controller
 {
     //
-    public static function get_trend(){
-        $response=Movie::whereNot('deleted', 1)->orWhereNull('deleted')->with('genres')->orderBy('id','desc')->paginate(6);
+    public static function get_trend($search){
+        $response=Movie::where('deleted', 0)->where('title','like','%'.$search.'%')->with('genres')->orderBy('id','desc')->paginate(6);
         return  $response;
     }
     public static function insert_script(){
