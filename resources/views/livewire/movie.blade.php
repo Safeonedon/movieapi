@@ -1,4 +1,8 @@
 <div class="row p-5">
+    <div class="col-span-6 sm:col-span-4">
+        <x-input id="current_password" style="padding: 8px; border: 1px solid #eee;" class="mt-1 block w-full"  wire:model="search" class='w-1/4' placeholder="Search" />
+    </div>
+
 @foreach($data as $movie )
         <div class="col-4 mt-3 ">
         <div class="card " style="width: 18rem;">
